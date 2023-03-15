@@ -1,6 +1,7 @@
 ﻿using DatingApp.Data;
 using DatingApp.DTOs;
 using DatingApp.Entities;
+using DatingApp.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
@@ -11,14 +12,16 @@ namespace DatingApp.Controllers
     public class AccountController : BaseApiController
     {
         private readonly DataContext context;
+        private readonly ITokenService tokenService;
 
-        public AccountController(DataContext context)
+        public AccountController(DataContext context, ITokenService tokenService)
         {
             this.context = context;
+            this.tokenService = tokenService;
         }
 
         [HttpPost("register")] // POST: api/account/register
-        public async Task<ActionResult<AppUser>>Register(RegisterDto registerDto)
+        public async Task<ActionResult<UserDto>>Register(RegisterDto registerDto)
         {
             if(await UserExists(registerDto.Username)) return BadRequest("Username is taken");
 
@@ -34,11 +37,15 @@ namespace DatingApp.Controllers
             context.Users.Add(user);
             await context.SaveChangesAsync();
 
-            return user;
+            return new UserDto
+            {
+                Username = user.UserName,
+                Token = tokenService.CreateToken(user)
+            };
         }
 
         [HttpPost("login")] // POST: api/account/login
-        public async Task<ActionResult<AppUser>> Login(LoginDto loginDto)
+        public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
             var user = await context.Users.SingleOrDefaultAsync(x => x.UserName == loginDto.Username);
 
@@ -53,7 +60,11 @@ namespace DatingApp.Controllers
                 if (computedHash[i] != user.PasswordHash[i]) return Unauthorized("Invalid Password");
             }
 
-            return user;
+            return new UserDto
+            {
+                Username = user.UserName,
+                Token = tokenService.CreateToken(user)
+            };
         }
 
         private async Task<bool> UserExists(string username)
