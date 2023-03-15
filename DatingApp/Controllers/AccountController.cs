@@ -37,7 +37,7 @@ namespace DatingApp.Controllers
             return user;
         }
 
-        [HttpPost("login")]
+        [HttpPost("login")] // POST: api/account/login
         public async Task<ActionResult<AppUser>> Login(LoginDto loginDto)
         {
             var user = await context.Users.SingleOrDefaultAsync(x => x.UserName == loginDto.Username);
