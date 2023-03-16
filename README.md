@@ -1,1 +1,1 @@
-# DatingApp (Randevu Uygulamas?)
+# DatingApp (Randevu Uygulamasi) made with DotNet and Angular
