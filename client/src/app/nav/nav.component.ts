@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Observable, of } from 'rxjs';
-import { User } from '../_models/user';
 import { AccountService } from '../_services/account.service';
 
 @Component({
@@ -21,8 +19,7 @@ export class NavComponent {
 
   login() {
     this.accountService.login(this.model).subscribe({
-      next: () => this.router.navigateByUrl('/members'),
-      error: error => this.toaster.error(error.error)
+      next: () => this.router.navigateByUrl('/members')
     })
   }
 
