@@ -13,8 +13,8 @@
     "Country": "Monaco",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/26.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/26.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -32,8 +32,8 @@
     "Country": "Guatemala",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/37.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/37.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -51,8 +51,8 @@
     "Country": "Switzerland",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/5.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/5.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -70,8 +70,8 @@
     "Country": "Tonga",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/35.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/35.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -89,8 +89,8 @@
     "Country": "France, Metropolitan",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/31.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/31.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -108,8 +108,8 @@
       "Country": "Trinidad and Tobago",
       "Photos": [
         {
-          "url": "https://randomuser.me/api/portraits/men/41.jpg",
-          "isMain": true
+          "Url": "https://randomuser.me/api/portraits/men/41.jpg",
+          "IsMain": true
         }
       ]
     },
@@ -127,8 +127,8 @@
       "Country": "Benin",
       "Photos": [
         {
-          "url": "https://randomuser.me/api/portraits/men/95.jpg",
-          "isMain": true
+          "Url": "https://randomuser.me/api/portraits/men/95.jpg",
+          "IsMain": true
         }
       ]
     },
@@ -146,8 +146,8 @@
       "Country": "Seychelles",
       "Photos": [
         {
-          "url": "https://randomuser.me/api/portraits/men/84.jpg",
-          "isMain": true
+          "Url": "https://randomuser.me/api/portraits/men/84.jpg",
+          "IsMain": true
         }
       ]
     },
@@ -165,8 +165,8 @@
       "Country": "Solomon Islands",
       "Photos": [
         {
-          "url": "https://randomuser.me/api/portraits/men/78.jpg",
-          "isMain": true
+          "Url": "https://randomuser.me/api/portraits/men/78.jpg",
+          "IsMain": true
         }
       ]
     },
@@ -184,8 +184,8 @@
       "Country": "New Zealand",
       "Photos": [
         {
-          "url": "https://randomuser.me/api/portraits/men/43.jpg",
-          "isMain": true
+          "Url": "https://randomuser.me/api/portraits/men/43.jpg",
+          "IsMain": true
         }
       ]
     }
